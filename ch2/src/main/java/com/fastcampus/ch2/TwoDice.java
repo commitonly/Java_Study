@@ -22,8 +22,8 @@ public class TwoDice {
         out.println("<head>");
         out.println("</head>");
         out.println("<body>");
-        out.println("<img src='/resources/img/dice"+idx1+".jpg'>"); // 랜덤으로 1~6까지 이미지가 출력됨
-        out.println("<img src='/resources/img/dice"+idx2+".jpg'>"); // 랜덤으로 1~6까지 이미지가 출력됨
+        out.println("<img src='/resources/img/dice"+idx1+".jpg'>"); // 랜덤으로 1~6까지 이미지가 출력되는 코드
+        out.println("<img src='/resources/img/dice"+idx2+".jpg'>"); // 랜덤으로 1~6까지 이미지가 출력되는 코드
         out.println("</body>");
         out.println("</html>");
 
