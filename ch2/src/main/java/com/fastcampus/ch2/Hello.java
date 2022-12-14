@@ -12,7 +12,7 @@ public class Hello {
 	// 2. URL과 메서드 연결
 	@RequestMapping("/hello")
 	private void main() {
-		System.out.println("Hello- private");
+		System.out.println("Hello- private this is test");
 		System.out.println(cv); // OK
 //		System.out.println(iv); // OK
 	}
