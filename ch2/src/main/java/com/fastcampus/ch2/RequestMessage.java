@@ -5,12 +5,13 @@ import java.io.InputStream;
 import java.util.Enumeration;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class RequestMessage {
     @RequestMapping("/requestMessage")
-    public void main(HttpServletRequest request) throws Exception {
+    public void main(HttpServletRequest request) throws IOException {
 
         // 1. request line
         String requestLine = request.getMethod();       // GET 또는 POST

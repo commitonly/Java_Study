@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/hello")
-public class HelloServlet  extends HttpServlet {
+public class HelloServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
