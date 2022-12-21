@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<%@ page contentType="text/html;charset=utf-8"%>
+<%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -67,7 +70,7 @@
 </head>
 <body>
 <!--    펑션 생략하고 입력해도 된다 원래는 function이 들어가야한다 -->
-<form action="registerInfo.jsp" method="post" onsubmit="return formCheck(this)">
+<form action="/register/save/" method="POST" onsubmit="return formCheck(this)">
     <div class="title">Register</div>
     <div id="msg" class="msg"> </div>
     <label for="">아이디</label>
@@ -105,7 +108,7 @@
     }
 
     function setMessage(msg, element){
-        document.getElementById("msg").innerHTML = `<i class="fa fa-exclamation-circle"> ${msg}</i>`;
+        document.getElementById("msg").innerHTML = `<i class="fa fa-exclamation-circle"> ${'${msg}'}'</i>`;
 
 
         //잘못된 값이 입력되었을 경우 해당 값으로 선택되어져서 사용자 입장에서 잘 알아채도록 도와주는 코드
