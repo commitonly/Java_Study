@@ -37,6 +37,6 @@ public class RegisterController {
     }
 
     private boolean isVailid(User user) {
-        return false;
+        return true;
     }
 }
