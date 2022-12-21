@@ -2,6 +2,7 @@
 <%@ page contentType="text/html;charset=utf-8"%>
 <%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page import="java.net.URLDecoder"%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -72,10 +73,9 @@
 <!--    펑션 생략하고 입력해도 된다 원래는 function이 들어가야한다 -->
 <form action="/register/save/" method="POST" onsubmit="return formCheck(this)">
     <div class="title">Register</div>
-    <div id="msg" class="msg"> </div>
+    <div id="msg" class="msg"> ${URLDecoder.decode(param.msg,"utf-8")}</div>
     <label for="">아이디</label>
-    <input class="input-field" type="text" name="id" placeholder="8~12자리의 영대소문자와 숫자 조합" autofocus>
-<!--    오토 포커스를 넣어주면 해당 인풋창이 깜빡깜빡 거리게 만들 수 있음-->
+    <input class="input-field" type="text" name="id" placeholder="8~12자리의 영대소문자와 숫자 조합" autofocus><!--    오토 포커스를 넣어주면 해당 인풋창이 깜빡깜빡 거리게 만들 수 있음-->
     <label for="">비밀번호</label>
     <input class="input-field" type="password" name="pwd" placeholder="8~12자리의 영대소문자와 숫자 조합">
     <label for="">이름</label>
