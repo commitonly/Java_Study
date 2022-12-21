@@ -1,27 +1,23 @@
 package com.fastcampus.ch2;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Calendar;
 
 //년월일을 입력하면 요일을 알려주는 프로그램
 @Controller
-public class YoilTellerMVC {//http://localhost:8080/getYoil?year=2021&month=10&day=1
+public class YoilTellerMVC2 {
     @ExceptionHandler(Exception.class)
     public String catcher(Exception ex){
         ex.printStackTrace();
         return "yoilError";
     }
-    @RequestMapping("/getYoilMVC") // 맵핑주소를 MVC로 바꿔준다 맵핑은 중복되면 충돌다니까 중복되지 않게 해야한다
+    @RequestMapping("/getYoilMVC2") // 맵핑주소를 MVC로 바꿔준다 맵핑은 중복되면 충돌다니까 중복되지 않게 해야한다 
     public ModelAndView main(@RequestParam(required = true) int year,
                              @RequestParam(required = true) int month,
                              @RequestParam(required = true) int day) throws IOException { // 모델을 적어주고 기존에 사용중이던 response는 더이상 필요없으니 지워줬다
